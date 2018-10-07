@@ -13,7 +13,7 @@ public class Turtle {
 		this.instructions = s; 
 		this.length = length; 
 		this.theta = theta; 
-		this.stroke = 2;
+		this.stroke = 3;
 	}
 	
 	public void render() {

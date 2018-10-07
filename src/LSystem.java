@@ -10,6 +10,7 @@ public class LSystem {
 	
 	int x_position; 
 	float length; 
+	int id; 
 	
 	int mode; 
 	String sentence; 
@@ -19,9 +20,10 @@ public class LSystem {
 	float theta; 
 	Turtle turtle; 
 	
-	LSystem(PApplet p, int mode, int generation, float theta, float scale, int x_position) {
+	LSystem(PApplet p, int mode, int generation, float theta, float scale,int x_position, int id) {
 		this.processing = p; 
 		
+		this.id = id; 
 		this.x_position = x_position;
 		
 		this.mode = mode;
@@ -128,7 +130,7 @@ public class LSystem {
 		// How the graphics change in relation to system 
 		for (int i = 0; i < generation; i++) {			
 			processing.pushMatrix();
-				processing.stroke(0,128,0);
+				processing.stroke(0,128,0);				
 				turtle.multLength(0.6f);
 				turtle.multStroke(0.8f);
 				generate(); 
